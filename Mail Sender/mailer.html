@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate Mailing</title>
+
+    <!-- cdn from smtpjs.com  -->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <form class="form" action="#" method="post">
+    <div class="container">
+        <label for="">To Address</label>
+        <input class="toAddress" type="text" name="" id="toAddress">
+        <label for="">Client Name</label>
+        <input class="clientName" type="text" name="" id="clientName">
+        <label for="">Client Brand</label>
+        <input class="clientBrand" type="text" name="" id="clientBrand">
+       <input type="button" value="Send Email" onclick="sendMail()">
+    </div>
+</form>
+
+<script type="text/javascript">
+    
+    const form = document.querySelector('.form');
+
+    // function to send mail
+    function sendMail(e){
+        const toAddress = document.querySelector('.toAddress');
+              clientName = document.querySelector('.clientName');
+              clintBrand = document.querySelector('.clientBrand');
+
+              Email.send({
+                Host : "smtpout.secureserver.net",
+                Username : "samreentaj028@gmail.com",
+                Password : "fkims5@khan",
+                To : 'samreentaj028@gmail.com',
+                From : "support@sjdinnovative.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+    }
+
+    // event listener
+    form.addEventListener('submit', sendMail);
+</script>
+  
+</body>
+</html>

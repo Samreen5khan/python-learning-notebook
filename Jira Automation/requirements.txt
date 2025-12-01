@@ -1,0 +1,8 @@
+pandas 
+openpyxl 
+jira 
+tk
+requests
+
+session cookie
+JSESSIONID : F2E8BE54882773F8160F3820FD93C1FB
